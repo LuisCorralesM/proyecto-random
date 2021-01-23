@@ -1,12 +1,4 @@
 /* fuentes---------- */
-/* vietnamese */
-@font-face {
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUAnx4RHw.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-  }
   /* latin-ext */
   @font-face {
     font-family: 'Josefin Sans';
@@ -22,42 +14,15 @@
     font-weight: 300;
     src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  /* vietnamese */
-  @font-face {
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUAnx4RHw.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-  }
-  /* latin-ext */
-  @font-face {
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUA3x4RHw.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  
+  }  
 
 *{
-
 box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
 
 /* header----------------- */
-
 
   .home-template{
     height: 76px;
@@ -105,7 +70,7 @@ padding: 0;
     padding: 15px; 
     margin-bottom: 11px
   }
-  
+
   .title-menu{
     margin-left: 10px;
   }
@@ -114,12 +79,35 @@ padding: 0;
     width: 50px;
   }
 
+  /* Responsive Menu   */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .logo_img{
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 100px
+  }
+
+  .btn-hamburguer{
+    right: 100px;
+    height: 100px;
+    width: 160px;
+  }
+  
+  .title-menu{
+    margin-top: 18px;
+  }
+
+  .title-menu > h3{
+    font-size: 30px;
+  }
+
+}
 
   /* menu-buttom */
 
   .content-span{
     display: block;
-    background-color: none;
+    background-color: white;
     width: 20px;
   }
 
@@ -145,7 +133,15 @@ padding: 0;
     animation-fill-mode: forwards;
   }
 
-    /* animation menu-buttom */
+  /* Responsive button   */
+
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    .content-span{
+      width: 30px;
+    }
+  }
+
+    /* animation menu-button */
 
     .content-span > button.open .top-line{
       animation-name: top-line-animation;
@@ -263,6 +259,18 @@ padding: 0;
       border-bottom: 2px solid #f3bbcc;
     }
 
+      /* Responsive menu nav   */
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    .content-menu{
+      padding: 20px 100px;
+      text-align: center;
+    }
+
+    .menu-list > a{
+      font-size: 20px;
+    }
+  }
+
   /* Banner----- */
 
   .slide{
@@ -303,7 +311,33 @@ padding: 0;
     100% {margin-left: -300%;}
   }
 
-
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    .slide{
+      margin: 0 auto;
+      width: 80vw;
+      height: 345px;
+      overflow-x: hidden;
+    }
+    .img-list__item > img{
+      width: 80vw;
+      height: 345px;
+      object-fit: fill;
+    }
+    @keyframes cambio{
+      0% {margin-left: 0;}
+      20% {margin-left: 0;}
+  
+      27% {margin-left: -80vw;}
+      47% {margin-left: -80vw;}
+  
+      54% {margin-left: -160vw;}
+      74% {margin-left: -160vw;}
+  
+      81% {margin-left: -240vw;}
+      100% {margin-left: -240vw;}
+    }
+  }
+    
   /* main */
 
   main{
@@ -353,6 +387,18 @@ padding: 0;
   color: #fff;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .btn button{
+    width: 30vw;
+  }
+  .btn1{
+    left: 75px;
+  }
+  .btn2{
+    right: 75px;
+  }
+}
+
 /* section2 */
 
 /* article1 */
@@ -383,6 +429,21 @@ padding: 0;
   font-weight: 100;
   padding-top: 30px;
   line-height: 1.5;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .categoria1{
+    margin: 20px 40px;
+  }
+  .img-labial{
+    margin-left: 100px;
+    width: 20vw;
+  }
+  .title-labial{
+    text-align: center;
+    width: 40vw;
+    padding-left: 50px;
+    font-size: 30px;
+  }
 }
 
 /* article2 */
@@ -426,6 +487,13 @@ padding: 0;
   color: white;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .grid-labiales{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin: 10px 40px;
+  }
+}
 
 /* section3 */
 /* artivle1 */
@@ -459,7 +527,21 @@ padding: 0;
   padding-top: 30px;
   line-height: 1.5;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .categoria2{
+    margin: 20px 40px;
+  }
+  .img-sombras{
+    margin-left: 100px;
+    width: 20vw;
+  }
+  .title-sombras{
+    text-align: center;
+    width: 40vw;
+    padding-left: 50px;
+    font-size: 30px;
+  }
+}
 /* article2 */
 
 .grid-sombras{
@@ -501,6 +583,14 @@ padding: 0;
   color: white;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .grid-sombras{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+    margin: 10px 40px;
+  }
+}
+
 /* footer */
 
 /* img */
@@ -520,12 +610,13 @@ padding: 0;
 /* lista footer */
 
 .list-footer{
-  padding: 10px 20px;
+  padding: 10px 0;
   background-color: rgb(230, 178, 178);
 }
 
 .miCuenta, .ayuda{
   list-style: none;
+  text-align: center;
 }
 
 .miCuenta > .titulo-miCuenta, .ayuda > .titulo-ayuda{
@@ -548,7 +639,10 @@ padding: 0;
 /* medios de pago */
 
 .medios-de-pago{
-  height: 50px;
+  height: auto;
+}
+
+.medios-de-pago > h3{
   padding: 20px 20px;
   font-family: 'Josefin Sans';
   text-align: center;
@@ -569,6 +663,39 @@ padding: 0;
   object-fit: co;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .list-footer{
+    display: flex;
+    padding: 10px 20px;
+  }
+  .miCuenta, .ayuda{
+    height: 250px;
+    width: 240px;
+  }
+  .miCuenta > li, .ayuda > li{
+    padding: 10px 0;
+    font-size: 12px;
+  }
+
+  .medios-de-pago{
+    width: 240px;
+    height: 250px;
+
+  }
+
+  .medios-de-pago > h3{
+    padding: 13px 20px;
+    background: rgb(230, 178, 178);
+    border-bottom: 1px solid rgb(229, 160, 160);
+  }
+  
+  .iconos-de-pago{
+    background: rgb(230, 178, 178);
+    height: 205px;
+    padding: 30px 5px;
+  }
+  
+}
 /* Derechos */
 
 .copyRight{
@@ -585,4 +712,16 @@ padding: 0;
 .copyRight > p > strong{
   font-family: 'Josefin Sans';
   font-weight: 200;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .copyRight{
+    height: 30px;
+    padding: 5px 10px;
+    background: linear-gradient( rgb(245, 196, 196),rgb(236, 139, 139));
+    text-align: center;
+  }
+  .copyRight > p{
+    font-size: 14px;
+  }
 }
